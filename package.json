@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/high-g/typescript-playground/issues"
   },
-  "homepage": "https://github.com/high-g/typescript-playground#readme"
+  "homepage": "https://github.com/high-g/typescript-playground#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
 }
