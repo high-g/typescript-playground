@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc src/"
+    "dev": "ts-node-dev --respawn"
   },
   "repository": {
     "type": "git",
