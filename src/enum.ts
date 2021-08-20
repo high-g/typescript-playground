@@ -1,7 +1,7 @@
 export {}
 
 enum Months {
-  January,
+  January = 1,
   February,
   March,
   April,
@@ -18,5 +18,18 @@ enum Months {
 Months.February
 
 console.log(Months.July)
-console.log(Months)
-console.log(Months[0])
+console.log(Months[2])
+
+enum COLORS {
+  red = '#ff0000',
+  white = '#ffffff',
+  blue = '#000000',
+}
+
+console.log(COLORS.red)
+
+enum COLORS {
+  yellow = '#ffff00',
+}
+
+console.log(COLORS.yellow)
