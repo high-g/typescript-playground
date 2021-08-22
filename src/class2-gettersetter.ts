@@ -1,15 +1,27 @@
 export {}
 
 class MyNumberCard {
-  protected owner: string
-  protected secretNumber: number
+  private _owner: string
+  private _secretNumber: number
 
   constructor(owner: string, secretNumber: number) {
-    this.owner = owner
-    this.secretNumber = secretNumber
+    this._owner = owner
+    this._secretNumber = secretNumber
+  }
+
+  get owner(): string {
+    return this._owner
+  }
+
+  set secretNumber(secretNumber: number) {
+    this._secretNumber = secretNumber
+  }
+
+  debugPrint() {
+    return `secretNumber: ${this._secretNumber}`
   }
 }
 
 const card = new MyNumberCard('takashi', 12234556)
-
-console.log(card)
+card.secretNumber = 1111
+console.log(card.debugPrint())
