@@ -7,3 +7,4 @@ type DetailedProfile = {
 }
 
 type SimpleProfile = Pick<DetailedProfile, 'name' | 'weight'>
+type SmallProfile = Omit<DetailedProfile, 'name' | 'weight'>
