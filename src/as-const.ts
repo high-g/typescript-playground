@@ -9,4 +9,4 @@ let profile = {
   height: 100,
 } as const
 
-profile.name = 'gggg'
+// profile.name = 'gggg'
