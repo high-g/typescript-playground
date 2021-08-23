@@ -1,8 +1,16 @@
 export {}
 
 namespace Japanese {
-  export class Person {
-    constructor(public name: string) {}
+  export namespace Tokyo {
+    export class Person {
+      constructor(public name: string) {}
+    }
+  }
+
+  export namespace Osaka {
+    export class Person {
+      constructor(public name: string) {}
+    }
   }
 }
 
@@ -12,7 +20,9 @@ namespace English {
   }
 }
 
-const person = new Japanese.Person('test')
+const person = new Japanese.Tokyo.Person('test')
+const osakajin = new Japanese.Osaka.Person('maido')
 const michael = new English.Person('Michael', 'Joseph', 'Jackson')
 console.log(person.name)
+console.log(osakajin.name)
 console.log(michael)
