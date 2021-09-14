@@ -38,19 +38,20 @@ const d: Omit<Foo4, 'age'> = {
 const user = { name: 'kenji', age: 98 } as const
 
 interface Part {
-  name?: string
-  age?: number
-  add?(): number
+  name: string
+  age: number
+  add(): number
 }
-
-const e: Part = {}
 
 type PartOfMethod<T> = {
-  [K in keyof T]: T[K]
-}
+  [K in keyof T]: T[K] extends Function ? K : never
+}[keyof T]
+
+type PartOfMethod2 = { name: never; age: 1; add: 'add' }['name' | 'age' | 'add']
+
+type result = PartOfMethod<Part>
 
 console.log(typeof '')
-console.log(typeof e)
 
 type Keys = keyof Part // 'name' | 'age' | 'add'
 let keys: Keys
