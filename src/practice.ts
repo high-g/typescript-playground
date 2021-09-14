@@ -51,3 +51,27 @@ type PartOfMethod<T> = {
 
 console.log(typeof '')
 console.log(typeof e)
+
+type Keys = keyof Part // 'name' | 'age' | 'add'
+let keys: Keys
+
+keys = 'name'
+// keys = 'age'
+// keys = 'add'
+
+type Keys2 = 'x' | 'y'
+type Frags = { [K in Keys2]: boolean }
+
+const frags: Frags = {
+  x: true,
+  y: true,
+}
+
+type Frags2 = {
+  x: boolean
+  y: boolean
+}
+
+type Frags2Key = {
+  [K in keyof Frags2]: Frags2[K]
+}
