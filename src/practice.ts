@@ -36,3 +36,18 @@ const d: Omit<Foo4, 'age'> = {
 }
 
 const user = { name: 'kenji', age: 98 } as const
+
+interface Part {
+  name?: string
+  age?: number
+  add?(): number
+}
+
+const e: Part = {}
+
+type PartOfMethod<T> = {
+  [K in keyof T]: T[K]
+}
+
+console.log(typeof '')
+console.log(typeof e)
