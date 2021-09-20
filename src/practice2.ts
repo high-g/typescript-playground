@@ -11,6 +11,7 @@ const test: res = 'sss'
 
 console.log(test)
 
+// generics
 interface Something<T> {
   id: number
   flag: T
